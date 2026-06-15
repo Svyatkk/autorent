@@ -1,0 +1,52 @@
+import type { ICar } from "./car.interface";
+
+export interface IBooking {
+    booking_id: number;
+    added_by: number | null;
+    agent_id: number | null;
+    cancellation_answer_id: number | null;
+    cancellation_reason: string | null;
+    cancelled_at: string | null;
+    cancelled_by: number | null;
+    car_id: number | null;
+    city_id: number;
+    client_full_name: string | null;
+    company_id: number | null;
+    created_at: string;
+    currency_id: string | null;
+    deleted_at: string | null;
+    direct: string | null;
+    drop_driver: number | null;
+    drop_driver_note: string | null;
+    drop_latitude: number | null;
+    drop_location: string | null;
+    drop_longitude: number | null;
+    drop_place_id: string | null;
+    end_date: string | null;
+    is_agent: number | null;
+    is_deleted: number;
+    is_reserved: number;
+    open_date: number;
+    other: string | null;
+    paid_at: string | null;
+    payment_status: number;
+    pickup_driver: number | null;
+    pickup_driver_note: string | null;
+    pickup_latitude: number | null;
+    pickup_location: string | null;
+    pickup_longitude: number | null;
+    pickup_place_id: string | null;
+    replacement: number;
+    sales: number | null;
+    send_sms_to_drivers: number | null;
+    send_sms_to_me: number | null;
+    source: string;
+    special_request: string | null;
+    start_date: string | null;
+    status: number;
+    total_amount: number | null;
+    uid: number | null;
+    updated_at: string | null;
+    user_id: number | null;
+
+}

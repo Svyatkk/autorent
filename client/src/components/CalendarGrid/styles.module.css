@@ -1,0 +1,15 @@
+.calendar {
+    border: 1px solid white;
+}
+
+.table {
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.column {
+    border: 1px solid white;
+}

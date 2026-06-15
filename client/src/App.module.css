@@ -1,0 +1,13 @@
+.app_layout {
+    border: 1px solid white;
+    flex: 1;
+
+}
+
+.main_content {
+    border: 1px solid red;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+
+}
