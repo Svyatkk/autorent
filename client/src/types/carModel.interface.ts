@@ -1,3 +1,5 @@
+import type { ICarBrand } from "./carBrand.interface";
+
 export interface ICarModel {
     attribute_0_100: string | null;
     attribute_doors: number | null;
@@ -20,4 +22,7 @@ export interface ICarModel {
     type: string;
     updated_at: string | null;
     youtube_video_link: string | null;
+
+
+    car_brand?: ICarBrand;
 }

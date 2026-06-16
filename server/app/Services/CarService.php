@@ -15,8 +15,7 @@ class CarService
             'bookings' => function($query) {
                 $query->where('status', 1);
             },
-            'carModel', 
-            'carBrand'  
+           'carModel.carBrand' 
         ])
         ->orderBy('car_id', 'asc')
         ->get()

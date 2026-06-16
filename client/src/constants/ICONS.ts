@@ -1,4 +1,4 @@
-import { Heart, ShoppingBasket, User, LayoutDashboard, Languages, MenuIcon, X, Search, ChevronRight, ShoppingCart, Bell } from 'lucide-react';
+import { Heart, ShoppingBasket, ChevronDown, User, LayoutDashboard, Languages, MenuIcon, X, Search, ChevronRight, ShoppingCart, Bell } from 'lucide-react';
 
 export const icons = {
     user: User,
@@ -11,6 +11,8 @@ export const icons = {
     arrowRight: ChevronRight,
     shoppingCart: ShoppingCart,
     bell: Bell,
-    language: Languages
+    language: Languages,
+    chevronDown: ChevronDown
+
 }
 
