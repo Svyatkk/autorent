@@ -6,7 +6,6 @@ export function useGetCarById(car_id: string) {
         queryKey: ['car', car_id],
         queryFn: () => carService.getById(car_id),
     })
-
-
     return { car: data, isLoading, isError }
 }
+

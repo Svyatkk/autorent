@@ -26,4 +26,10 @@ class CarService
     {
         return Car::with('bookings')->findOrFail($id);
     }
+
+   public function getByRegNum(string $regNum): Car
+    {
+        return Car::with('carModel')->where('registration_number', $regNum)->firstOrFail();
+    }
+
 }

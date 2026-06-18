@@ -15,10 +15,12 @@ class CarController extends Controller
         return response()->json($cars);
     }
     
-    public function getCarById(string $id): JsonResponse 
-    {
-        $car = $this->carService->getById($id);
+    public function getCar(string $identifier): JsonResponse
+{
+    $car = is_numeric($identifier) 
+        ? $this->carService->getById($identifier)
+        : $this->carService->getByRegNum($identifier);
 
-        return response()->json($car);
-    }
+    return response()->json($car);
+}
 }

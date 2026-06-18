@@ -14,4 +14,10 @@ export const carService = {
         return response.data
     },
 
+    async getByRegNum(regNum: string) {
+        const response = await axios.get<ICar>(`${BASE_URL}/cars/search/${regNum}`, fetchOptions)
+        return response.data
+    },
+
+
 }

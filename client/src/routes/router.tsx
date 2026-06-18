@@ -5,6 +5,8 @@ import CarsPage from '../pages/CarsPage'
 import { PAGES_URL } from '../constants/PAGES_URL'
 import CarPage from '../pages/CarPage'
 import CarsOverviewPage from '../pages/CarsOverviewPage'
+import CarSearchPage from '../pages/CarSearchPage'
+
 export const router = createBrowserRouter([
     {
         path: PAGES_URL.MAIN,
@@ -21,6 +23,10 @@ export const router = createBrowserRouter([
             {
                 path: PAGES_URL.CAR_INFO_ROUTE,
                 element: <CarPage></CarPage>
+            },
+            {
+                path: '/cars/search/:regnum',
+                element: <CarSearchPage />
             }
         ]
     }
