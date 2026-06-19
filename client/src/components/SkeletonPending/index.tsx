@@ -1,11 +1,12 @@
 import styles from './styles.module.css'
+import { SKELETON_ROWS } from '../../constants/CALENDAR'
 
 type Props = {
     rows?: number
     columns: number
 }
 
-export default function SkeletonPending({ rows = 5, columns }: Props) {
+export default function SkeletonPending({ rows = SKELETON_ROWS, columns }: Props) {
     return (
         <>
 

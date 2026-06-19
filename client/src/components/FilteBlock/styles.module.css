@@ -1,0 +1,83 @@
+.filterBlock {
+    display: flex;
+    align-items: end;
+    gap: 14px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.filterField,
+.searchField {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #27313f;
+}
+
+.filterField select,
+.searchField input {
+    height: 36px;
+    min-width: 150px;
+    padding: 0 10px;
+    border: 1px solid #cfd8e3;
+    border-radius: 6px;
+    background: #fff;
+    color: #18212f;
+    font: inherit;
+    font-weight: 400;
+}
+
+.searchField {
+    flex-direction: row;
+    align-items: end;
+    gap: 8px;
+}
+
+.searchField span {
+    display: flex;
+    align-items: center;
+    height: 36px;
+}
+
+.searchField input {
+    min-width: 210px;
+}
+
+.searchField button {
+    height: 36px;
+    padding: 0 16px;
+    border: 0;
+    border-radius: 6px;
+    background: #1d64d8;
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.searchField button:hover {
+    background: #1554bb;
+}
+
+@media (max-width: 720px) {
+    .filterBlock,
+    .searchField {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .searchField span {
+        height: auto;
+    }
+
+    .filterField select,
+    .searchField input {
+        min-width: 0;
+        width: 100%;
+    }
+}

@@ -85,6 +85,8 @@ export interface ICar {
     with_owner: number;
     youtube_video_link: string | null;
 
+    free_days?: number;
+    all_days?: number;
 
     bookings: IBooking[]
     car_model: ICarModel,
