@@ -1,11 +1,13 @@
 import { Outlet } from 'react-router-dom'
-import Navbar from './components/Navbar' // твій майбутній або поточний компонент шапки
+import Navbar from './components/Navbar'
 import styles from './App.module.css'
+import BlockChangeLang from './components/BlockChangeLang'
 
 function App() {
   return (
     <div className={styles.app_layout}>
-      <Navbar />
+      <Navbar>
+      </Navbar>
 
       <main className={styles.main_content}>
         <Outlet />

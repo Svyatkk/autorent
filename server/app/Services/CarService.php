@@ -17,7 +17,8 @@ class CarService
     public function getAll(int $year = 2023, int $month = 1): array
     {
         [$from, $to] = $this->getMonthBounds($year, $month);
-
+    
+            
         return $this->baseCarsQuery()
             ->with($this->relationsForPeriod($from, $to))
             ->orderBy('car_id', 'asc')

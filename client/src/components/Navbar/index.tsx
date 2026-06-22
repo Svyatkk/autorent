@@ -2,9 +2,12 @@ import { PAGES_URL } from '../../constants/PAGES_URL'
 import styles from './styles.module.css'
 import { icons } from '../../constants/ICONS'
 import { Link } from 'react-router-dom'
-
+import BlockChangeLang from '../BlockChangeLang'
+import { useState } from 'react'
 
 export default function NavBar() {
+
+    const [activeModal, setactiveModal] = useState<boolean | false>(false)
     return (
         <nav className={styles.navbar}>
             <div className={styles.nav}>
@@ -18,8 +21,9 @@ export default function NavBar() {
                 </div>
 
                 <div className={styles.sectionUser}>
-                    <span>
+                    <span onClick={() => setactiveModal(prev => !prev)} className={styles.userReact}>
                         <icons.language></icons.language>
+                        <BlockChangeLang active={activeModal} setActive={setactiveModal}></BlockChangeLang>
                     </span>
                     <span>
                         <icons.user></icons.user>
@@ -28,6 +32,6 @@ export default function NavBar() {
                 </div>
             </div>
 
-        </nav>
+        </nav >
     )
 }
