@@ -32,4 +32,15 @@ protected $table = 'rc_cars_brands';
     {
         return $this->hasMany(Car::class, 'car_brand_id', 'car_brand_id');
     }
+
+    public function translation()
+    {
+        return $this->hasOne(CarBrandTranslation::class, 'car_brand_id', 'car_brand_id')
+            ->where('lang', app()->getLocale());
+    }
+
+    public function translations(): HasMany
+    {
+        return $this->hasMany(CarBrandTranslation::class, 'car_brand_id', 'car_brand_id');
+    }
 }

@@ -25,9 +25,6 @@ export default function NavBar() {
                         <icons.language></icons.language>
                         <BlockChangeLang active={activeModal} setActive={setactiveModal}></BlockChangeLang>
                     </span>
-                    <span>
-                        <icons.user></icons.user>
-                    </span>
 
                 </div>
             </div>

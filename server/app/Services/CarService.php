@@ -18,7 +18,7 @@ class CarService
     {
         [$from, $to] = $this->getMonthBounds($year, $month);
     
-            
+
         return $this->baseCarsQuery()
             ->with($this->relationsForPeriod($from, $to))
             ->orderBy('car_id', 'asc')
@@ -58,6 +58,7 @@ class CarService
             ->where('is_deleted', '!=', 1);
     }
 
+    
     private function relationsForPeriod(Carbon $from, Carbon $to): array
     {
         return [
@@ -70,6 +71,9 @@ class CarService
                     ->orderBy('start_date');
             },
             'carModel.carBrand',
+            'translation',
+            'carModel.translation',
+            'carModel.carBrand.translation',
         ];
     }
 
@@ -82,7 +86,8 @@ class CarService
     }
 
     private function appendAvailability(Car $car, Carbon $from, Carbon $to): Car
-    {
+    {   
+
         $car->setAttribute('free_days', $this->countFreeDays($car->bookings, $from, $to));
         $car->setAttribute('all_days', $from->daysInMonth);
 
@@ -98,6 +103,8 @@ class CarService
             if ($this->isCarFreeForDay($bookings, $day)) {
                 $freeDays++;
             }
+        
+
 
             $day->addDay();
         }

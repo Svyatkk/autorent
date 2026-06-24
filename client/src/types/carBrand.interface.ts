@@ -1,3 +1,5 @@
+import type { ICarBrandTranslation } from "./carBrandTranslation.interface";
+
 export interface ICarBrand {
     car_brand_id: number;
     created_at: string;
@@ -8,4 +10,5 @@ export interface ICarBrand {
     status: number;
     updated_at: string | null;
     youtube_video_link: string | null;
-}
+    translation?: ICarBrandTranslation;
+}

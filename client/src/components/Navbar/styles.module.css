@@ -1,6 +1,5 @@
 .navbar {
     width: 100%;
-    border: 1px solid white;
     height: 70px;
 
     display: flex;
@@ -10,23 +9,21 @@
 .logo {
     font-size: 30px !important;
     color: white;
-
 }
 
 .nav {
-    max-width: 1200px;
+    max-width: 1600px;
     width: 100%;
     flex: 1;
     display: flex;
 
     justify-content: space-between;
     align-items: center;
-    border: 1px solid white;
 }
+
 
 .sectionUser {
     display: flex;
-    border: 1px solid white;
     color: white;
     gap: 20px;
 }

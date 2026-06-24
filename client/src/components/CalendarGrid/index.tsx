@@ -75,6 +75,7 @@ function getBookingStyle(booking: IBooking, year: number, month: number): React.
     const leftDays = (visibleStart.getTime() - monthStart.getTime()) / DAY_MS
     const widthDays = (visibleEnd.getTime() - visibleStart.getTime()) / DAY_MS
 
+
     return {
         left: `${leftDays * CELL_WIDTH}px`,
         width: `${Math.max(widthDays * CELL_WIDTH, 4)}px`,
@@ -146,7 +147,7 @@ export default function CalendarGrid() {
                         <SkeletonPending rows={5} columns={daysInMonth} />
                     ) : displayCars.length > 0 ? (
                         displayCars.map((car, index) => {
-                            const modelName = car?.car_model?.slug || 'Невідома модель'
+                            const modelName = car?.car_model?.translation?.name || car?.car_model?.slug || 'Невідома модель'
                             const isOpen = openedCar === car.car_id
 
                             return (

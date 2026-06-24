@@ -1,4 +1,5 @@
 import type { ICarBrand } from "./carBrand.interface";
+import type { ICarModelTranslation } from "./carModelTranslation.interface";
 
 export interface ICarModel {
     attribute_0_100: string | null;
@@ -25,4 +26,5 @@ export interface ICarModel {
 
 
     car_brand?: ICarBrand;
+    translation?: ICarModelTranslation;
 }

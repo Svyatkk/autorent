@@ -1,6 +1,7 @@
 import type { IBooking } from "./booking.interface";
 import type { ICarBrand } from "./carBrand.interface";
 import type { ICarModel } from "./carModel.interface";
+import type { ICarTranslation } from "./carTranslation.interface";
 
 export interface ICar {
     age_restriction: number | null;
@@ -90,6 +91,6 @@ export interface ICar {
 
     bookings: IBooking[]
     car_model: ICarModel,
-    car_brand: ICarBrand
-
+    car_brand: ICarBrand,
+    translation?: ICarTranslation
 }

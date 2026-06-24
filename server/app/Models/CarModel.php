@@ -25,4 +25,15 @@ public function carBrand(): BelongsTo
     {
         return $this->hasMany(Car::class, 'car_model_id', 'car_model_id');
     }
+
+    public function translation()
+    {
+        return $this->hasOne(CarModelTranslation::class, 'car_model_id', 'car_model_id')
+            ->where('lang', app()->getLocale());
+    }
+
+    public function translations(): HasMany
+    {
+        return $this->hasMany(CarModelTranslation::class, 'car_model_id', 'car_model_id');
+    }
 }

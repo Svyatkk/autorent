@@ -44,4 +44,15 @@ class Car extends Model
     {
         return $this->hasMany(Booking::class, 'car_id', 'car_id');
     }
+
+    public function translation()
+    {
+        return $this->hasOne(CarTranslation::class, 'car_id', 'car_id')
+            ->where('lang', app()->getLocale());
+    }
+
+    public function translations(): HasMany
+    {
+        return $this->hasMany(CarTranslation::class, 'car_id', 'car_id');
+    }
 }

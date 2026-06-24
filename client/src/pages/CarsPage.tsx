@@ -21,9 +21,11 @@ export default function CarsPage() {
                 </thead>
                 <tbody>
                     {cars?.map(car => (
-                        <tr onClick={() => navigate(PAGES_URL.CAR_INFO(car.car_id))} key={car.car_id}>
+                        <tr onClick={() => navigate(PAGES_URL.CAR_INFO(car.car_id))} style={{ cursor: "pointer" }} key={car.car_id}>
                             <td>{car.car_id}</td>
-                            <td>{car.car_model_id}</td>
+                            <td>
+                                {car.car_brand?.translation?.name || car.car_brand?.slug || ''} {car.car_model?.translation?.name || car.car_model?.slug || ''}
+                            </td>
                             <td>{car.registration_number}</td>
 
                         </tr>

@@ -13,8 +13,14 @@ export default function CarPage() {
             <h2>Деталі автомобіля #{car.car_id}</h2>
 
             <div>
+                {car.translation?.title && <h3>{car.translation.title}</h3>}
+                <p><strong>Марка:</strong> {car.car_brand?.translation?.name || car.car_brand?.slug || '—'}</p>
+                <p><strong>Модель:</strong> {car.car_model?.translation?.name || car.car_model?.slug || '—'}</p>
                 <p><strong>Номер (Plate):</strong> {car.registration_number}</p>
                 <p><strong>Рік:</strong> {car.attribute_year}</p>
+                <p><strong>Колір:</strong> {car.translation?.attribute_color || '—'}</p>
+                <p><strong>Колір салону:</strong> {car.translation?.attribute_interior_color || '—'}</p>
+                <p><strong>Опис:</strong> {car.translation?.description || '—'}</p>
                 <p><strong>Статус:</strong> {car.status}</p>
 
                 <hr style={{ margin: '20px 0' }} />

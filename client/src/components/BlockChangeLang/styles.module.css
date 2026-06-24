@@ -1,25 +1,44 @@
 .block {
     position: absolute;
-    width: 80px;
-    height: 100px;
-    background-color: white;
-    opacity: 0;
-    transition: 0.2s;
-    right: 0%;
-
-
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 160px;
+    background: black;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 6px;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .block.active {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
 
-    background-color: black;
-    opacity: 1;
-    transition: 0.2s;
+.langItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 7px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    font-weight: 400;
+    transition: background 0.15s, color 0.15s;
+    white-space: nowrap;
+}
 
+.langItem:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
 
-
-    border-radius: 5px;
-
-
-
+.langItem.selected {
+    background: gray;
+    color: #a5b4fc;
+    font-weight: 600;
 }
